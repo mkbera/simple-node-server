@@ -9,7 +9,7 @@ const port = 80;
 
 const corsOptions = {
   origin: "https://charming-speculoos-ed78cb.netlify.app",
-  credentials: true,
+//   credentials: true,
 };
 app.use(cors(corsOptions));
 
