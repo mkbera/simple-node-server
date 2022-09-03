@@ -11,7 +11,11 @@ const corsOptions = {
   origin: "https://charming-speculoos-ed78cb.netlify.app",
 //   credentials: true,
 };
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
+app.options('*', cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 mongoose.connect(
   "mongodb+srv://mongouser:wardrobe@cluster0.a9lf41o.mongodb.net/myFirstDataBase?retryWrites=true&w=majority",
